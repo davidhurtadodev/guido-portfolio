@@ -1,6 +1,16 @@
-export default function TextContainer({ text }: { text: React.ReactNode }) {
+export default function TextContainer({
+  text,
+  className,
+}: {
+  text: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <div className="w-[315px] h-[410px] mb-20 lg:w-[590px] lg:h-[310px]">
+    <div
+      className={`w-[315px] h-[410px] mb-20 lg:w-[590px] lg:h-[310px] ${
+        className && className
+      }`}
+    >
       <div className="w-full flex justify-center">
         <div className="w-[305px] h-[5px] lg:w-[580px]  bg-[#D7D5CD]"></div>
       </div>
