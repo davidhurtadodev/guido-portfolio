@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${antonio.variable} ${vt323.variable} after:absolute after:w-0 after:h-0 after:overflow-hidden after:-z-10 after:content-[url('/assets/images/guido-drinking.gif')] cursor-[url(/assets/images/pointer.svg),_auto]`}
+        className={`${antonio.variable} ${vt323.variable} after:absolute after:w-0 after:h-0 after:overflow-hidden after:-z-10 after:content-[url('/assets/images/guido-drinking.gif')] cursor-[url(/assets/images/cursor.gif),_auto]`}
       >
         {children}
       </body>

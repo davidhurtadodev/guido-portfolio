@@ -8,6 +8,31 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        animateY: 'animateY 3s ease-in-out infinite',
+        rotateShip: 'rotateShip 2s linear infinite',
+      },
+      keyframes: {
+        rotateShip: {
+          from: { transform: 'rotate(0)' },
+          '33%': {
+            transform: 'rotate(-2deg)',
+          },
+          '66%': {
+            transform: 'rotate(2deg)',
+          },
+          to: { transform: 'rotate(0)' },
+        },
+        animateY: {
+          from: { transform: 'translate(0, 0)' },
+          '65%': {
+            transform: 'translate(0, 30px)',
+          },
+          to: {
+            transform: 'translate(0, 0px)',
+          },
+        },
+      },
       fontFamily: {
         sans: ['var(--font-antonio)'],
         mono: ['var(--font-vt323)'],
