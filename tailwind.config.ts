@@ -11,8 +11,17 @@ const config: Config = {
       animation: {
         animateY: 'animateY 3s ease-in-out infinite',
         rotateShip: 'rotateShip 2s linear infinite',
+        lineMovement: 'moveLine 2s linear infinite',
       },
       keyframes: {
+        moveLine: {
+          from: {
+            transform: 'translateX(0)',
+          },
+          to: {
+            transform: 'translateX(-100vw)',
+          },
+        },
         rotateShip: {
           from: { transform: 'rotate(0)' },
           '33%': {
