@@ -34,19 +34,26 @@ export default function MovementLines({
     const animation = animate(
       'div',
       { x: '-200vw' },
-      { duration: 2, repeat: Infinity, ease: 'linear' }
+      { duration: 3, repeat: Infinity, ease: 'linear' }
     );
 
     scrollYProgress.onChange((latest) => {
-      if (latest < 0.2) {
+      if (latest < 0.1) {
         animation.speed = 1;
       } else if (latest >= 0.2 && latest < 0.3) {
         animation.speed = 2;
-      } else if (latest >= 0.3 && latest < 0.8) {
-        animation.speed = 3;
-      } else if (latest >= 0.8) {
-        animation.speed = 1;
+      } else if (latest >= 0.3 && latest < 0.4) {
+        animation.speed = 4;
+      } else if (latest >= 0.4 && latest < 0.8) {
+        animation.speed = 6;
+      } else if (latest >= 0.8 && latest < 0.85) {
+        animation.speed = 4;
+      } else if (latest >= 0.85) {
+        animation.speed = 2;
       }
+      // else if (latest >= 0.9) {
+      //   animation.speed = 1;
+      // }
     });
     console.log(animation.speed);
   }, [scrollYProgress]);

@@ -19,8 +19,7 @@ export default function VerticalShipContainer() {
     target: ref,
   });
 
-  const position = useTransform(scrollYProgress, [0, 1], ['-100%', '100%']);
-  console.log(position);
+  const position = useTransform(scrollYProgress, [0, 1], ['-150%', '150%']);
 
   const leftTextOpacity = useTransform(
     scrollYProgress,
@@ -100,7 +99,7 @@ export default function VerticalShipContainer() {
           </motion.div>
         </div>
       </div> */}
-      <div className="lg:hidden w-full flex  h-[300vh] justify-start flex-col items-center">
+      <div className="lg:hidden w-full flex  h-[600vh] justify-start flex-col items-center">
         <div className="mt-0 ">
           <TextContainer
             text={
@@ -122,8 +121,8 @@ export default function VerticalShipContainer() {
             }
           />
         </div>
-
-        <div className="sticky top-[1px] h-[100vh] overflow-hidden   left-0 right-0  w-full ">
+        {/* OJO no mover el height de 100vh */}
+        <div className="sticky top-[1px] h-[100vh] overflow-hidden   left-0 right-0  w-full  mb-[400px]">
           <MovementLines
             top="top-[100px]"
             width="w-[171px]"
