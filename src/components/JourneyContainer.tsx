@@ -1,18 +1,10 @@
 'use client';
 import TextContainer from './TextContainer';
-import Image from 'next/image';
-import ship from '@assets/images/spaceship.png';
-import Line from '@assets/images/line.svg';
-import { useEffect, useRef, useState } from 'react';
-import {
-  motion,
-  useMotionValue,
-  useScroll,
-  useSpring,
-  useTransform,
-  useVelocity,
-} from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import { motion, useAnimate, useScroll, useTransform } from 'framer-motion';
 import MovementLines from './MovementLines';
+import { linesArr } from '@/lib/linesArray';
+
 export default function VerticalShipContainer() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -21,23 +13,7 @@ export default function VerticalShipContainer() {
 
   const position = useTransform(scrollYProgress, [0, 1], ['-150%', '150%']);
 
-  const leftTextOpacity = useTransform(
-    scrollYProgress,
-    [0, 0.6, 0.8, 1],
-    ['0', '0.01', '0.8', '1']
-  );
-  const rightTextOpacity = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.5, 1],
-    ['1', '1', '0.01', '0']
-  );
-
-  const linesX = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    ['-50px', '-80px', '-150px']
-  );
-  console.log(scrollYProgress.get());
+  const [scope, animate] = useAnimate();
 
   return (
     <section
@@ -99,7 +75,7 @@ export default function VerticalShipContainer() {
           </motion.div>
         </div>
       </div> */}
-      <div className="lg:hidden w-full flex  h-[600vh] justify-start flex-col items-center">
+      <div className="lg:hidden w-full flex  h-[800vh] justify-start flex-col items-center">
         <div className="mt-0 ">
           <TextContainer
             text={
@@ -122,73 +98,21 @@ export default function VerticalShipContainer() {
           />
         </div>
         {/* OJO no mover el height de 100vh */}
-        <div className="sticky top-[1px] h-[100vh] overflow-hidden   left-0 right-0  w-full  mb-[400px]">
-          <MovementLines
-            top="top-[100px]"
-            width="w-[171px]"
-            initial={0}
-            right="right-0"
-            left="left-[200vw]"
-            containerRef={ref}
-          />
-          <MovementLines
-            top="top-[140px]"
-            width="w-[131px]"
-            initial={0}
-            right="-right-[50%]"
-            left="left-[250vw]"
-            containerRef={ref}
-          />
-
-          <MovementLines
-            top="top-[190px]"
-            width="w-[121px]"
-            initial={0}
-            right="-right-[15%]"
-            left="left-[200vw]"
-            containerRef={ref}
-          />
-          <MovementLines
-            top="top-[250px]"
-            width="w-[181px]"
-            initial={0}
-            right="-right-[65%]"
-            left="left-[200vw]"
-            containerRef={ref}
-          />
-          <MovementLines
-            top="top-[300px]"
-            width="w-[131px]"
-            initial={0}
-            right="-right-[85%]"
-            left="left-[200vw]"
-            containerRef={ref}
-          />
-          <MovementLines
-            top="top-[365px]"
-            width="w-[101px]"
-            initial={0}
-            right="-right-[25%]"
-            left="left-[200vw]"
-            containerRef={ref}
-          />
-          <MovementLines
-            top="top-[405px]"
-            width="w-[121px]"
-            initial={0}
-            right="-right-[45%]"
-            left="left-[200vw]"
-            containerRef={ref}
-          />
-          <MovementLines
-            top="top-[455px]"
-            width="w-[141px]"
-            initial={0}
-            right="-right-[15%]"
-            left="left-[200vw]"
-            containerRef={ref}
-          />
-
+        <div
+          className="sticky top-[1px] h-screen overflow-hidden   left-0 right-0  w-full  mb-[500px] max-h-screen"
+          ref={scope}
+        >
+          {linesArr.map((line, index) => (
+            <MovementLines
+              initial={0}
+              top={line.top}
+              width={line.width}
+              right={line.right}
+              containerRef={ref}
+              key={index}
+              animate={animate}
+            />
+          ))}
           <motion.div
             className="fixed top-[20%] bg-[url('/assets/images/spaceship.png')]   w-[335px] h-[186.111px] lg:w-[540px] lg:h-[300px] animate-animateY animate-rotateShip bg-contain"
             style={{ left: position }}
