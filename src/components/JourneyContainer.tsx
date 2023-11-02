@@ -10,21 +10,24 @@ import {
 } from 'framer-motion';
 import MovementLines from './MovementLines';
 import { linesArr } from '@/lib/linesArray';
+import useWindowWidth from '@/lib/hooks/useWindowWidth';
 
 export default function VerticalShipContainer() {
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1024);
+  const { width } = useWindowWidth();
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
   useEffect(() => {
-    const handleResizeWindow = () => {
-      window.innerWidth >= 1024 ? setIsMobile(false) : setIsMobile(true);
-    };
-    // subscribe to window resize event "onComponentDidMount"
-    window.addEventListener('resize', handleResizeWindow);
+    setIsMobile(width! < 1024);
+    //   const handleResizeWindow = () => {
+    //     window.innerWidth >= 1024 ? setIsMobile(false) : setIsMobile(true);
+    //   };
+    //   // subscribe to window resize event "onComponentDidMount"
+    //   window.addEventListener('resize', handleResizeWindow);
 
-    return () => {
-      // unsubscribe "onComponentDestroy"
-      window.removeEventListener('resize', handleResizeWindow);
-    };
+    //   return () => {
+    //     // unsubscribe "onComponentDestroy"
+    //     window.removeEventListener('resize', handleResizeWindow);
+    //   };
   });
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -47,35 +50,38 @@ export default function VerticalShipContainer() {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
-    const animation = animate(
-      'div',
-      { x: '-350vw' },
-      { duration: 6, repeat: Infinity, ease: 'linear' }
-    );
+    if (isMobile !== null) {
+      const animation = animate(
+        'div',
+        { x: '-350vw' },
+        { duration: 6, repeat: Infinity, ease: 'linear' }
+      );
 
-    scrollYProgress.on('change', (latest) => {
-      // if (latest < 0.01) {
-      //   animation.pause();
-      //   return;
-      // } else animation.play();
-      if (latest < 0.1) {
-        animation.speed = 1;
-      } else if (latest >= 0.2 && latest < 0.3) {
-        animation.speed = 2;
-      } else if (latest >= 0.3 && latest < 0.4) {
-        animation.speed = 4;
-      } else if (latest >= 0.4 && latest < 0.8) {
-        animation.speed = 6;
-      } else if (latest >= 0.8 && latest < 0.85) {
-        animation.speed = 4;
-      } else if (latest >= 0.85) {
-        animation.speed = 2;
-      } else if (latest >= 0.9) {
-        animation.speed = 1;
-      }
-    });
-  }, [scrollYProgress]);
-  console.log(isMobile);
+      scrollYProgress.on('change', (latest) => {
+        console.log(isMobile);
+        // if (latest < 0.01) {
+        //   animation.pause();
+        //   return;
+        // } else animation.play();
+        if (latest < 0.1) {
+          animation.speed = 1;
+        } else if (latest >= 0.2 && latest < 0.3) {
+          animation.speed = 2;
+        } else if (latest >= 0.3 && latest < 0.4) {
+          animation.speed = 4;
+        } else if (latest >= 0.4 && latest < 0.8) {
+          animation.speed = 6;
+        } else if (latest >= 0.8 && latest < 0.85) {
+          animation.speed = 4;
+        } else if (latest >= 0.85) {
+          animation.speed = 2;
+        } else if (latest >= 0.9) {
+          animation.speed = 1;
+        }
+      });
+    }
+  }, [scrollYProgress, isMobile]);
+
   return (
     <section
       ref={ref}
