@@ -7,7 +7,7 @@ export default function TextContainer({
 }) {
   return (
     <div
-      className={`w-[315px] h-[410px] mb-20 lg:w-[590px] lg:h-[310px] ${
+      className={`w-[315px] h-[410px] mb-20 lg:w-[590px] lg:h-[310px] bg-primary ${
         className && className
       }`}
     >

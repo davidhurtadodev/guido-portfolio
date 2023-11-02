@@ -1,19 +1,34 @@
 'use client';
 import TextContainer from './TextContainer';
-import Image from 'next/image';
-import ship from '@assets/images/spaceship.png';
-import Line from '@assets/images/line.svg';
 import { useEffect, useRef, useState } from 'react';
 import {
   motion,
-  useMotionValue,
+  useAnimate,
   useScroll,
-  useSpring,
   useTransform,
-  useVelocity,
+  inView,
 } from 'framer-motion';
 import MovementLines from './MovementLines';
+import { linesArr } from '@/lib/linesArray';
+import useWindowWidth from '@/lib/hooks/useWindowWidth';
+
 export default function VerticalShipContainer() {
+  const { width } = useWindowWidth();
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    setIsMobile(width! < 1024);
+    //   const handleResizeWindow = () => {
+    //     window.innerWidth >= 1024 ? setIsMobile(false) : setIsMobile(true);
+    //   };
+    //   // subscribe to window resize event "onComponentDidMount"
+    //   window.addEventListener('resize', handleResizeWindow);
+
+    //   return () => {
+    //     // unsubscribe "onComponentDestroy"
+    //     window.removeEventListener('resize', handleResizeWindow);
+    //   };
+  });
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -32,25 +47,72 @@ export default function VerticalShipContainer() {
     ['1', '1', '0.01', '0']
   );
 
-  const linesX = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    ['-50px', '-80px', '-150px']
-  );
-  console.log(scrollYProgress.get());
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+    if (isMobile !== null) {
+      const animation = animate(
+        'div',
+        { x: '-350vw' },
+        { duration: 6, repeat: Infinity, ease: 'linear' }
+      );
+
+      scrollYProgress.on('change', (latest) => {
+        console.log(isMobile);
+        // if (latest < 0.01) {
+        //   animation.pause();
+        //   return;
+        // } else animation.play();
+        if (latest < 0.1) {
+          animation.speed = 1;
+        } else if (latest >= 0.2 && latest < 0.3) {
+          animation.speed = 2;
+        } else if (latest >= 0.3 && latest < 0.4) {
+          animation.speed = 4;
+        } else if (latest >= 0.4 && latest < 0.8) {
+          animation.speed = 6;
+        } else if (latest >= 0.8 && latest < 0.85) {
+          animation.speed = 4;
+        } else if (latest >= 0.85) {
+          animation.speed = 2;
+        } else if (latest >= 0.9) {
+          animation.speed = 1;
+        }
+      });
+    }
+  }, [scrollYProgress, isMobile]);
 
   return (
     <section
       ref={ref}
       className=" bg-primary w-full flex flex-col items-center pt-[148px] lg:pt-10"
     >
-      <h2 className="uppercase text-[40px] text-secondary font-mono lg:text-[62px] lg:mb-[188px]">
+      <h2 className="uppercase text-[40px] text-secondary font-mono lg:text-[62px] lg:mb-[50px]">
         The journey
       </h2>
-      {/* <div className="hidden lg:block min-h-[300vh]  w-full ">
-        <div className="flex w-full justify-around sticky top-[30vh]">
+      <div className="hidden lg:block h-[200vh]   w-full ">
+        <div
+          className=" w-full  sticky top-[30vh] left-0 right-0  h-screen overflow-hidden flex justify-around
+            max-h-screen pt-[100px]"
+        >
+          {isMobile === false && (
+            <div ref={scope}>
+              {linesArr.map((line, index) => (
+                <MovementLines
+                  initial={0}
+                  top={line.top}
+                  width={line.width}
+                  right={line.right}
+                  containerRef={ref}
+                  key={index}
+                  animate={animate}
+                />
+              ))}
+            </div>
+          )}
+
           <motion.div
-            className="fixed top-[20%] bg-[url('/assets/images/spaceship.png')]   w-[335px] h-[186.111px] lg:w-[540px] lg:h-[300px] animate-animateY animate-rotateShip bg-contain"
+            className="fixed top-[30%] bg-[url('/assets/images/spaceship.png')]   w-[335px] h-[186.111px] lg:w-[540px] lg:h-[300px] animate-animateY animate-rotateShip bg-contain "
             style={{ left: position }}
           />
           <motion.div style={{ opacity: leftTextOpacity }}>
@@ -98,7 +160,7 @@ export default function VerticalShipContainer() {
             />
           </motion.div>
         </div>
-      </div> */}
+      </div>
       <div className="lg:hidden w-full flex  h-[600vh] justify-start flex-col items-center">
         <div className="mt-0 ">
           <TextContainer
@@ -122,73 +184,22 @@ export default function VerticalShipContainer() {
           />
         </div>
         {/* OJO no mover el height de 100vh */}
-        <div className="sticky top-[1px] h-[100vh] overflow-hidden   left-0 right-0  w-full  mb-[400px]">
-          <MovementLines
-            top="top-[100px]"
-            width="w-[171px]"
-            initial={0}
-            right="right-0"
-            left="left-[200vw]"
-            containerRef={ref}
-          />
-          <MovementLines
-            top="top-[140px]"
-            width="w-[131px]"
-            initial={0}
-            right="-right-[50%]"
-            left="left-[250vw]"
-            containerRef={ref}
-          />
-
-          <MovementLines
-            top="top-[190px]"
-            width="w-[121px]"
-            initial={0}
-            right="-right-[15%]"
-            left="left-[200vw]"
-            containerRef={ref}
-          />
-          <MovementLines
-            top="top-[250px]"
-            width="w-[181px]"
-            initial={0}
-            right="-right-[65%]"
-            left="left-[200vw]"
-            containerRef={ref}
-          />
-          <MovementLines
-            top="top-[300px]"
-            width="w-[131px]"
-            initial={0}
-            right="-right-[85%]"
-            left="left-[200vw]"
-            containerRef={ref}
-          />
-          <MovementLines
-            top="top-[365px]"
-            width="w-[101px]"
-            initial={0}
-            right="-right-[25%]"
-            left="left-[200vw]"
-            containerRef={ref}
-          />
-          <MovementLines
-            top="top-[405px]"
-            width="w-[121px]"
-            initial={0}
-            right="-right-[45%]"
-            left="left-[200vw]"
-            containerRef={ref}
-          />
-          <MovementLines
-            top="top-[455px]"
-            width="w-[141px]"
-            initial={0}
-            right="-right-[15%]"
-            left="left-[200vw]"
-            containerRef={ref}
-          />
-
+        <div
+          className="sticky top-[1px] h-screen overflow-hidden   left-0 right-0  w-full  mb-[500px] max-h-screen"
+          ref={isMobile ? scope : undefined}
+        >
+          {isMobile &&
+            linesArr.map((line, index) => (
+              <MovementLines
+                initial={0}
+                top={line.top}
+                width={line.width}
+                right={line.right}
+                containerRef={ref}
+                key={index}
+                animate={animate}
+              />
+            ))}
           <motion.div
             className="fixed top-[20%] bg-[url('/assets/images/spaceship.png')]   w-[335px] h-[186.111px] lg:w-[540px] lg:h-[300px] animate-animateY animate-rotateShip bg-contain"
             style={{ left: position }}
