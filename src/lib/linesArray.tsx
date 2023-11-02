@@ -5,6 +5,11 @@ export const linesArr = [
     right: '-right-[187%]',
   },
   {
+    top: 'top-[55px]',
+    width: 'w-[131px]',
+    right: '-right-[167%]',
+  },
+  {
     top: 'top-[100px]',
     width: 'w-[171px]',
     right: '-right-[165%]',
