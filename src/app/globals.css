@@ -6,10 +6,10 @@ body {
   background: #312f2a;
 }
 .window {
-  margin: 0;
-  overflow: auto;
-  background-color: #312f2a;
-  font-family: auto;
+  margin: 0 !important;
+  overflow: auto !important;
+  background-color: #312f2a !important;
+  font-family: auto !important;
 }
 
 ::-webkit-scrollbar-button:horizontal:start:decrement,
