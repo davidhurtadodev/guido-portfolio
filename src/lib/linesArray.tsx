@@ -101,4 +101,19 @@ export const linesArr = [
     width: 'w-[76px]',
     right: '-right-[195%]',
   },
+  {
+    top: 'top-[615px]',
+    width: 'w-[95px]',
+    right: '-right-[152%]',
+  },
+  {
+    top: 'top-[644px]',
+    width: 'w-[125px]',
+    right: '-right-[200%]',
+  },
+  {
+    top: 'top-[700px]',
+    width: 'w-[134px]',
+    right: '-right-[234%]',
+  },
 ];

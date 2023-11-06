@@ -14,17 +14,21 @@ export default function JourneyDesktop({
 }) {
   const { width } = useWindowWidth();
 
-  const position = useTransform(scrollYProgress, [0, 1], ['-150%', '150%']);
+  const position = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.7, 1],
+    ['-100%', '5%', '5%', '150%']
+  );
 
   const leftTextOpacity = useTransform(
     scrollYProgress,
-    [0, 0.6, 0.8, 1],
-    ['0', '0.01', '0.8', '1']
+    [0, 0.8, 0.9],
+    ['0', '0', '1']
   );
   const rightTextOpacity = useTransform(
     scrollYProgress,
-    [0, 0.2, 0.5, 1],
-    ['0', '1', '0.01', '0']
+    [0, 0.3, 0.5, 0.7],
+    ['0', '0.001', '1', '0']
   );
 
   const [scope, animate] = useAnimate();
@@ -57,9 +61,9 @@ export default function JourneyDesktop({
     }
   }, [scrollYProgress, width, animate]);
   return (
-    <div className="hidden lg:block h-[400vh]   w-full ">
+    <div className="hidden lg:block h-[600vh]   w-full ">
       <div
-        className=" w-full  sticky top-[30vh] left-0 right-0  h-screen overflow-hidden flex justify-around
+        className=" w-full  sticky top-0 left-0 right-0  h-screen overflow-hidden flex justify-around
             max-h-screen pt-[100px]"
       >
         <div ref={scope}>
@@ -80,7 +84,7 @@ export default function JourneyDesktop({
           className="fixed top-[30%] bg-[url('/assets/images/spaceship.png')]   w-[335px] h-[186.111px] lg:w-[540px] lg:h-[300px] animate-animateY animate-rotateShip bg-contain "
           style={{ left: position }}
         />
-        <motion.div style={{ opacity: leftTextOpacity }}>
+        <motion.div className="mt-[15%]" style={{ opacity: leftTextOpacity }}>
           <TextContainer
             text={
               <>
@@ -101,11 +105,11 @@ export default function JourneyDesktop({
             }
           />
         </motion.div>
-        <motion.div style={{ opacity: rightTextOpacity }}>
+        <motion.div className="mt-[15%]" style={{ opacity: rightTextOpacity }}>
           <TextContainer
             text={
               <>
-                <p className="text-secondary font-mono text-[20px]  leading-[20px] mb-4">
+                <p className="text-secondary font-mono text-[20px]  leading-[20px] mb-4 ">
                   Todo el mundo dice que nací con un control de Nintendo en las
                   manos y es que no lo puedo evitar, me apasionan los
                   videojuegos. Mi primer recuerdo gráfico e interactivo me
