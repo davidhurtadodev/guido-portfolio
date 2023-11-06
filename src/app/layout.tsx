@@ -1,3 +1,4 @@
+import '../../node_modules/@sakun/system.css/style.css';
 import './globals.css';
 import type { Metadata } from 'next';
 import { antonio, vt323 } from '@/lib/fonts';
@@ -15,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${antonio.variable} ${vt323.variable} after:absolute after:w-0 after:h-0 after:overflow-hidden after:-z-10 after:content-[url('/assets/images/guido-drinking.gif')] cursor-[url(/assets/images/cursor.gif),_auto]`}
+        className={`window ${antonio.variable} ${vt323.variable} after:absolute after:w-0 after:h-0 after:overflow-hidden after:-z-10 after:content-[url('/assets/images/guido-drinking.gif')] cursor-[url(/assets/images/cursor.gif),_auto]`}
       >
         {children}
       </body>

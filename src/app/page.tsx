@@ -5,7 +5,7 @@ import JourneyContainer from '@/components/JourneyContainer';
 
 export default function Home() {
   return (
-    <main>
+    <main className="">
       <ScreenContainer>
         <Header />
         <Hero />
