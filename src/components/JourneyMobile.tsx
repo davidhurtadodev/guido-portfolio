@@ -84,7 +84,7 @@ export default function JourneyMobile({
           />
         ))}
         <motion.div
-          className="fixed top-[20%] bg-[url('/assets/images/spaceship.png')]   w-[335px] h-[186.111px] lg:w-[540px] lg:h-[300px] animate-animateY animate-rotateShip bg-contain"
+          className="fixed top-[20%] bg-[url('/assets/images/spaceship.png')]   w-[335px] h-[186.111px] lg:w-[540px] lg:h-[300px] animate-shipAnimation bg-contain"
           style={{ left: position }}
         />
       </div>

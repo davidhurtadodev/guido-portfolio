@@ -61,7 +61,7 @@ export default function JourneyDesktop({
     }
   }, [scrollYProgress, width, animate]);
   return (
-    <div className="hidden lg:block h-[500vh]   w-full ">
+    <div className="hidden lg:block h-[400vh]   w-full ">
       <div
         className=" w-full  sticky top-0 left-0 right-0  h-screen overflow-hidden flex justify-around
             max-h-screen pt-[100px]"
@@ -81,7 +81,7 @@ export default function JourneyDesktop({
         </div>
 
         <motion.div
-          className="fixed top-[30%] bg-[url('/assets/images/spaceship.png')]   w-[335px] h-[186.111px] lg:w-[540px] lg:h-[300px] animate-animateY animate-rotateShip bg-contain "
+          className="fixed top-[30%] bg-[url('/assets/images/spaceship.png')]   w-[335px] h-[186.111px] lg:w-[540px] lg:h-[300px] animate-shipAnimation bg-contain "
           style={{ left: position }}
         />
         <motion.div className="mt-[15%]" style={{ opacity: leftTextOpacity }}>

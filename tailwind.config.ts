@@ -10,9 +10,12 @@ const config: Config = {
   theme: {
     extend: {
       animation: {
-        animateY: 'animateY 3s ease-in-out infinite',
-        rotateShip: 'rotateShip 2s linear infinite',
+        // animateY: 'animateY 3s ease-in-out infinite',
+        // rotateShip: 'rotateShip 2s linear infinite',
+        shipAnimation:
+          'animateY 3s ease-in-out infinite, rotateShip 2s linear infinite',
         lineMovement: 'moveLine 2s linear infinite',
+        moveArrow: 'arrowY 1.5s infinite',
       },
       keyframes: {
         moveLine: {
@@ -34,12 +37,25 @@ const config: Config = {
           to: { transform: 'rotate(0)' },
         },
         animateY: {
-          from: { transform: 'translate(0, 0)' },
+          from: { transform: 'translateY(0)' },
           '65%': {
-            transform: 'translate(0, 30px)',
+            transform: 'translateY(30px)',
           },
           to: {
-            transform: 'translate(0, 0px)',
+            transform: 'translateY(0px)',
+          },
+        },
+        arrowY: {
+          from: {
+            transform: 'translatY(0)',
+            opacity: '0',
+          },
+          '50%': {
+            opacity: '1',
+          },
+          to: {
+            transform: 'translateY(20px)',
+            opacity: '0',
           },
         },
       },

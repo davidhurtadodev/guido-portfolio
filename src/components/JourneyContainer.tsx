@@ -26,6 +26,7 @@ export default function VerticalShipContainer() {
     <section
       ref={ref}
       className=" bg-primary w-full flex flex-col items-center pt-[148px] lg:pt-10"
+      id="journeySection"
     >
       <h2 className="uppercase text-[40px] text-secondary font-mono lg:text-[62px] lg:mb-[50px]">
         The journey
