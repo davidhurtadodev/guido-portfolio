@@ -61,7 +61,7 @@ export default function JourneyDesktop({
     }
   }, [scrollYProgress, width, animate]);
   return (
-    <div className="hidden lg:block h-[600vh]   w-full ">
+    <div className="hidden lg:block h-[500vh]   w-full ">
       <div
         className=" w-full  sticky top-0 left-0 right-0  h-screen overflow-hidden flex justify-around
             max-h-screen pt-[100px]"
