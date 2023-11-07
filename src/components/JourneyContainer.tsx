@@ -1,20 +1,13 @@
 'use client';
-import TextContainer from './TextContainer';
-import { useEffect, useRef, useState } from 'react';
-import {
-  motion,
-  useAnimate,
-  useScroll,
-  useTransform,
-  inView,
-} from 'framer-motion';
-import MovementLines from './MovementLines';
-import { linesArr } from '@/lib/linesArray';
+
+import { useRef } from 'react';
+import { useScroll } from 'framer-motion';
+
 import useWindowWidth from '@/lib/hooks/useWindowWidth';
 import JourneyMobile from './JourneyMobile';
 import JourneyDesktop from './JourneyDesktop';
 
-export default function VerticalShipContainer() {
+export default function JourneyContainer() {
   const { width } = useWindowWidth();
 
   const ref = useRef(null);
