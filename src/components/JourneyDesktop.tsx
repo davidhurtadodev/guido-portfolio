@@ -61,7 +61,7 @@ export default function JourneyDesktop({
     }
   }, [scrollYProgress, width, animate]);
   return (
-    <div className="hidden lg:block h-[600vh]   w-full ">
+    <div className="hidden lg:block h-[400vh]   w-full ">
       <div
         className=" w-full  sticky top-0 left-0 right-0  h-screen overflow-hidden flex justify-around
             max-h-screen pt-[100px]"
@@ -81,25 +81,26 @@ export default function JourneyDesktop({
         </div>
 
         <motion.div
-          className="fixed top-[30%] bg-[url('/assets/images/spaceship.png')]   w-[335px] h-[186.111px] lg:w-[540px] lg:h-[300px] animate-animateY animate-rotateShip bg-contain "
+          className="fixed top-[30%] bg-[url('/assets/images/spaceship.png')]   w-[335px] h-[186.111px] lg:w-[540px] lg:h-[300px] animate-shipAnimation bg-contain "
           style={{ left: position }}
         />
         <motion.div className="mt-[15%]" style={{ opacity: leftTextOpacity }}>
           <TextContainer
+            height="290px"
             text={
               <>
-                <p className="text-secondary font-mono text-[20px]  leading-[20px] mb-4">
-                  Todo el mundo dice que nací con un control de Nintendo en las
-                  manos y es que no lo puedo evitar, me apasionan los
-                  videojuegos. Mi primer recuerdo gráfico e interactivo me
-                  transporta a un mundo donde un personaje amarillo se come a
-                  sus enemigos (Pacman).
+                <p className="text-secondary font-mono text-[20px]  leading-[20px] mb-4 ">
+                  Later, my path led me to pursue postgraduate studies in
+                  Barcelona, Spain. One in digital editions and another in
+                  innovation and design thinking.
                 </p>
                 <p className="text-secondary font-mono text-[20px]  leading-[20px]">
-                  El anime, los comics, la fotografía, el cine y los videojuegos
-                  no solo llenan mi tiempo libre de experiencias satisfactorias
-                  sino que a través de los años me han alimentado a tal punto de
-                  que influyen en una parte importante de mi trabajo.
+                  Now, I am dedicated to working with companies developing SaaS
+                  products, apps, and websites.
+                </p>
+                <p className="text-secondary font-mono text-[20px]  leading-[20px]">
+                  Additionally, in my free time, I work on personal projects
+                  related to video games.
                 </p>
               </>
             }
@@ -107,20 +108,25 @@ export default function JourneyDesktop({
         </motion.div>
         <motion.div className="mt-[15%]" style={{ opacity: rightTextOpacity }}>
           <TextContainer
+            height="290px"
+            className="w-[315px] h-[410px]
+          lg:w-[590px] lg:h-[310px]"
             text={
               <>
                 <p className="text-secondary font-mono text-[20px]  leading-[20px] mb-4 ">
-                  Todo el mundo dice que nací con un control de Nintendo en las
-                  manos y es que no lo puedo evitar, me apasionan los
-                  videojuegos. Mi primer recuerdo gráfico e interactivo me
-                  transporta a un mundo donde un personaje amarillo se come a
-                  sus enemigos (Pacman).
+                  It all started with the little yellow character (Pacman) on an
+                  Atari 2600. Since then, my interest and passion for
+                  interaction in various digital media have only grown.
                 </p>
                 <p className="text-secondary font-mono text-[20px]  leading-[20px]">
-                  El anime, los comics, la fotografía, el cine y los videojuegos
-                  no solo llenan mi tiempo libre de experiencias satisfactorias
-                  sino que a través de los años me han alimentado a tal punto de
-                  que influyen en una parte importante de mi trabajo.
+                  At the age of 18, I decided to study graphic design, and from
+                  there, my professional career began, focused on designing and
+                  developing Websites for various clients.
+                </p>
+                <p className="text-secondary font-mono text-[20px]  leading-[20px]">
+                  I lived in Costa Rica for 4 years, where I had the opportunity
+                  to work on platforms for the financial, governmental, tourism,
+                  and NGO sectors.
                 </p>
               </>
             }
