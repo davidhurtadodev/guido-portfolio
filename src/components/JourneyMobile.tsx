@@ -58,7 +58,7 @@ export default function JourneyMobile({
                 Atari 2600. Since then, my interest and passion for interaction
                 in various digital media have only grown.
               </p>
-              <p className="text-secondary font-mono text-[20px]  leading-[20px]">
+              <p className="text-secondary font-mono text-[20px]  leading-[20px] mb-4">
                 At the age of 18, I decided to study graphic design, and from
                 there, my professional career began, focused on designing and
                 developing Websites for various clients.
@@ -105,7 +105,7 @@ export default function JourneyMobile({
                 Barcelona, Spain. One in digital editions and another in
                 innovation and design thinking.
               </p>
-              <p className="text-secondary font-mono text-[20px]  leading-[20px]">
+              <p className="text-secondary font-mono text-[20px]  leading-[20px]mb-4">
                 Now, I am dedicated to working with companies developing SaaS
                 products, apps, and websites.
               </p>
