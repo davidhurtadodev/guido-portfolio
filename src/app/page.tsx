@@ -6,7 +6,7 @@ import ProjectsContainer from '@/components/ProjectsContainer';
 
 export default function Home() {
   return (
-    <main className="">
+    <main id="main" className="bg-primary relative">
       <ScreenContainer>
         <Header />
         <Hero />

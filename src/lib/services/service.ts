@@ -6,12 +6,14 @@ export async function getProjects(first = 4) {
         posts(first: $first) {
           nodes {
             excerpt
+            title
+            uri
             featuredImage {
               node {
-                sourceUrl
+                altText
+                sourceUrl(size: LARGE)
               }
             }
-            title
           }
         }
       }`,

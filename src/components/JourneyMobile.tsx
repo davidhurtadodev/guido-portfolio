@@ -48,20 +48,25 @@ export default function JourneyMobile({
     <div className="lg:hidden w-full flex  h-[600vh] justify-start flex-col items-center">
       <div className="mt-0 ">
         <TextContainer
+          height="290px"
+          className="w-[315px] h-[410px]
+        lg:w-[590px] lg:h-[310px]"
           text={
             <>
-              <p className="text-secondary font-mono text-[20px]  leading-[20px] mb-4">
-                Todo el mundo dice que nací con un control de Nintendo en las
-                manos y es que no lo puedo evitar, me apasionan los videojuegos.
-                Mi primer recuerdo gráfico e interactivo me transporta a un
-                mundo donde un personaje amarillo se come a sus enemigos
-                (Pacman).
+              <p className="text-secondary font-mono text-[20px]  leading-[20px] mb-4 ">
+                It all started with the little yellow character (Pacman) on an
+                Atari 2600. Since then, my interest and passion for interaction
+                in various digital media have only grown.
               </p>
               <p className="text-secondary font-mono text-[20px]  leading-[20px]">
-                El anime, los comics, la fotografía, el cine y los videojuegos
-                no solo llenan mi tiempo libre de experiencias satisfactorias
-                sino que a través de los años me han alimentado a tal punto de
-                que influyen en una parte importante de mi trabajo.
+                At the age of 18, I decided to study graphic design, and from
+                there, my professional career began, focused on designing and
+                developing Websites for various clients.
+              </p>
+              <p className="text-secondary font-mono text-[20px]  leading-[20px]">
+                I lived in Costa Rica for 4 years, where I had the opportunity
+                to work on platforms for the financial, governmental, tourism,
+                and NGO sectors.
               </p>
             </>
           }
@@ -90,20 +95,23 @@ export default function JourneyMobile({
       </div>
       <div className="mt-auto mb-0 shrink-0">
         <TextContainer
+          className="w-[315px] h-[290px]
+        lg:w-[590px] lg:h-[290px]"
+          height="290px"
           text={
             <>
-              <p className="text-secondary font-mono text-[20px]  leading-[20px] mb-4">
-                Todo el mundo dice que nací con un control de Nintendo en las
-                manos y es que no lo puedo evitar, me apasionan los videojuegos.
-                Mi primer recuerdo gráfico e interactivo me transporta a un
-                mundo donde un personaje amarillo se come a sus enemigos
-                (Pacman).
+              <p className="text-secondary font-mono text-[20px]  leading-[20px] mb-4 ">
+                Later, my path led me to pursue postgraduate studies in
+                Barcelona, Spain. One in digital editions and another in
+                innovation and design thinking.
               </p>
               <p className="text-secondary font-mono text-[20px]  leading-[20px]">
-                El anime, los comics, la fotografía, el cine y los videojuegos
-                no solo llenan mi tiempo libre de experiencias satisfactorias
-                sino que a través de los años me han alimentado a tal punto de
-                que influyen en una parte importante de mi trabajo.
+                Now, I am dedicated to working with companies developing SaaS
+                products, apps, and websites.
+              </p>
+              <p className="text-secondary font-mono text-[20px]  leading-[20px]">
+                Additionally, in my free time, I work on personal projects
+                related to video games.
               </p>
             </>
           }
