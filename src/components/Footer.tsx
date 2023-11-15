@@ -26,13 +26,13 @@ export default function Footer() {
         </div>
         <div className="flex  ml-1 mb-7 lg:mb-0 lg:flex-col">
           <p className="hidden lg:block text-secondary text-[27px] mb-4 font-mono uppercase lg:mt-3">
-            You can also find me here:
+            You can also find me on:
           </p>
           <div className="flex gap-x-2">
             <Link className="block" href="/#">
               <Linkedin className="fill-secondary hover:fill-accent" />
             </Link>
-            <Link className="block" href="/#">
+            <Link className="block" href="https://www.youtube.com/nipkowtv">
               <Youtube className="fill-secondary hover:fill-accent" />
             </Link>
           </div>
