@@ -45,12 +45,16 @@ export default function ProjectPreview({
         </div>
 
         <div className="mb-6">
-          <p className="font-mono text-secondary text-[27px] font-normal">
+          <p className="font-mono text-secondary text-[27px] font-normal leading-5 lg:leading-7">
             {project.text}
           </p>
         </div>
-        <Link href={project.url ?? '/#'}>
-          <Button className="uppercase bg-transparent w-[253px] border-secondary border flex justify-center gap-x-2 font-mono text-2xl text-secondary py-3 h-[49px] hover:bg-[#FF4C6C]">
+        <Link
+          className="hover:no-underline"
+          target="_blank"
+          href={project.url ?? '/#'}
+        >
+          <Button className="uppercase bg-transparent w-[253px]   flex justify-center gap-x-2 font-mono text-2xl text-secondary py-3 h-[49px] hover:bg-[#FF4C6C] [border-image-source:url(/assets/images/button-border.svg)] [border-image-slice:3]  [border-image-width:2] border border-accent [border-image-repeat:stretch]">
             View project
             <Tab />
           </Button>

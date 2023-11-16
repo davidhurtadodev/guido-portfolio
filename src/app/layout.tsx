@@ -1,4 +1,5 @@
 import '../../node_modules/@sakun/system.css/style.css';
+import '../../node_modules/nes.css/css/nes.css';
 import './globals.css';
 import type { Metadata } from 'next';
 import { antonio, vt323 } from '@/lib/fonts';
