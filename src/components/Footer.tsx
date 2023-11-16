@@ -4,7 +4,10 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#21201C] px-5 pt-7 pb-4 mt-[100px] lg:p-[93px] lg:pb-10 ">
+    <footer
+      id="footer"
+      className="bg-[#21201C] px-5 pt-7 pb-4 mt-[100px] lg:p-[93px] lg:pb-10 "
+    >
       <div className="lg:flex lg:gap-x-[283px] lg:mb-12">
         <div>
           <div className="mb-5">

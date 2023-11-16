@@ -32,11 +32,11 @@ export default function Header() {
           </li>
 
           <li className="font-mono uppercase text-secondary text-[28px] lg:text-[32px] hover:text-accent">
-            <Link href="#projects">Projects</Link>
+            <Link href="#projectsSection">Projects</Link>
           </li>
 
           <li className="font-mono uppercase text-secondary text-[28px] lg:text-[32px] hover:text-accent">
-            <Link href="#contact">Contact</Link>
+            <Link href="#footer">Contact</Link>
           </li>
         </ul>
       </nav>
