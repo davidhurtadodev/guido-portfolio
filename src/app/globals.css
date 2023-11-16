@@ -157,3 +157,7 @@ a:hover {
   color: #ff4c6c;
   text-decoration: none;
 }
+a {
+  color: #d7d5cd !important;
+  text-decoration: none !important;
+}
