@@ -7,7 +7,6 @@ import TextContainer from './TextContainer';
 
 export default function JourneyDesktop({
   scrollYProgress,
-  containerRef,
 }: {
   scrollYProgress: MotionValue<number>;
   containerRef: MutableRefObject<null>;
@@ -69,13 +68,10 @@ export default function JourneyDesktop({
         <div ref={scope}>
           {linesArr.map((line, index) => (
             <MovementLines
-              initial={0}
               top={line.top}
               width={line.width}
               right={line.right}
-              containerRef={containerRef}
               key={index}
-              animate={animate}
             />
           ))}
         </div>

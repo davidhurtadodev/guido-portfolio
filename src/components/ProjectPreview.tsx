@@ -54,7 +54,7 @@ export default function ProjectPreview({
           target="_blank"
           href={project.url ?? '/#'}
         >
-          <Button className="uppercase bg-transparent w-[253px]   flex justify-center gap-x-2 font-mono text-2xl text-secondary py-3 h-[49px] hover:bg-[#FF4C6C] [border-image-source:url(/assets/images/button-border.svg)] [border-image-slice:3]  [border-image-width:2] border border-accent [border-image-repeat:stretch]">
+          <Button className="uppercase bg-transparent w-[253px]   flex justify-center gap-x-2 font-mono text-2xl text-secondary py-3 h-[49px] hover:bg-[#FF4C6C] [border-image-source:url(/assets/images/button-border.svg)] [border-image-slice:3]  [border-image-width:2] border  [border-image-repeat:stretch]">
             View project
             <Tab />
           </Button>

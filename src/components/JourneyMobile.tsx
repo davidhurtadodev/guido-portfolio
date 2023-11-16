@@ -79,13 +79,10 @@ export default function JourneyMobile({
       >
         {linesArr.map((line, index) => (
           <MovementLines
-            initial={0}
             top={line.top}
             width={line.width}
             right={line.right}
-            containerRef={containerRef}
             key={index}
-            animate={animate}
           />
         ))}
         <motion.div

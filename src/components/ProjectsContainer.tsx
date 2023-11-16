@@ -1,11 +1,7 @@
-// import { getProjects } from '@/lib/services/service';
-// import type { Project } from '@/lib/types';
 import { projectsData } from '@/lib/projectsData';
 import ProjectPreview from './ProjectPreview';
 
 export default async function ProjectsContainer() {
-  // const projects: Array<Project> = await getProjects(4);
-  // projects.forEach((project) => console.log(project));
   return (
     <div className="grid place-items-center w-full">
       <h2 className="uppercase text-[40px] text-secondary font-mono lg:text-[62px] mb-[110px] lg:mb-[250px]">
