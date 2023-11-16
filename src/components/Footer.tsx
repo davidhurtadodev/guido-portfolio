@@ -29,10 +29,14 @@ export default function Footer() {
             You can also find me on:
           </p>
           <div className="flex gap-x-2">
-            <Link className="block" href="/#">
+            <Link target="_blank" className="block" href="/#">
               <Linkedin className="fill-secondary hover:fill-accent" />
             </Link>
-            <Link className="block" href="https://www.youtube.com/nipkowtv">
+            <Link
+              target="_blank"
+              className="block"
+              href="https://www.youtube.com/nipkowtv"
+            >
               <Youtube className="fill-secondary hover:fill-accent" />
             </Link>
           </div>

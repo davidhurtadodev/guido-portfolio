@@ -21,7 +21,9 @@ export default function TextContainer({
         <div
           className={`w-[5px] ${h} lg:w-[5px]  bg-[#D7D5CD] ml-0 mr-auto shrink-0`}
         ></div>
-        <div className="ml-[10px] my-[10px] mr-[34px]">{text}</div>
+        <div className="ml-[10px] my-[10px] mr-[34px] text-xl lg:text-[27px]">
+          {text}
+        </div>
         <div
           className={`w-[5px] ${h} lg:w-[5px]  bg-[#D7D5CD] mr-0 ml-auto shrink-0`}
         ></div>

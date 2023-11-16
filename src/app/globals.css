@@ -150,5 +150,10 @@ body {
 
 a:hover,
 button:hover {
-  cursor: url('/assets/images/pointer-hover.svg') 22 22, auto !important;
+  cursor: url('/assets/images/pointer-hover.svg') 25 25, auto !important;
+}
+
+a:hover {
+  color: #ff4c6c;
+  text-decoration: none;
 }
