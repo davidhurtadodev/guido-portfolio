@@ -63,7 +63,7 @@ export default function JourneyMobile({
                 there, my professional career began, focused on designing and
                 developing Websites for various clients.
               </p>
-              <p className="text-secondary font-mono text-[20px]  leading-[20px]lg:text-[27px]">
+              <p className="text-secondary font-mono text-[20px]  leading-[20px] lg:text-[27px]">
                 I lived in Costa Rica for 4 years, where I had the opportunity
                 to work on platforms for the financial, governmental, tourism,
                 and NGO sectors.
@@ -102,11 +102,11 @@ export default function JourneyMobile({
                 Barcelona, Spain. One in digital editions and another in
                 innovation and design thinking.
               </p>
-              <p className="text-secondary font-mono text-[20px]  leading-[20px]mb-4 lg:text-[27px]">
+              <p className="text-secondary font-mono text-[20px]  leading-[20px] mb-4 lg:text-[27px]">
                 Now, I am dedicated to working with companies developing SaaS
                 products, apps, and websites.
               </p>
-              <p className="text-secondary font-mono text-[20px]  leading-[20px]lg:text-[27px]">
+              <p className="text-secondary font-mono text-[20px]  leading-[20px] lg:text-[27px]">
                 Additionally, in my free time, I work on personal projects
                 related to video games.
               </p>

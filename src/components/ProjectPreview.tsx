@@ -45,7 +45,7 @@ export default function ProjectPreview({
         </div>
 
         <div className="mb-6">
-          <p className="font-mono text-secondary text-[27px] font-normal leading-5 lg:leading-7">
+          <p className="font-mono text-secondary text-xl lg:text-[27px] font-normal leading-5 lg:leading-7">
             {project.text}
           </p>
         </div>
