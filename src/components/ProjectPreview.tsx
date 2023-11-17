@@ -30,7 +30,7 @@ export default function ProjectPreview({
       <div className="lg:max-w-[695px]">
         <div className="flex gap-x-2 mb-2 items-center">
           <div
-            className={`relative lg:hidden h-auto grow ${project.img.dimensions} `}
+            className={`relative lg:hidden  grow ${project.img.dimensions} `}
           >
             <Image
               className="object-contain "
