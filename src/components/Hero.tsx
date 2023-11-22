@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="pl-5 lg:pl-24 relative mt-auto mb-0 grow">
       <div className="mt-[126px]">
-        <p className="uppercase font-mono text-[28px] text-secondary lg:text-[40px] xl:text-[40px] 2xl:text-[50px] -mb-4  lg:mt-[12%] lg:-mb-6">
+        <p className="uppercase font-mono text-[28px]z text-secondary lg:text-[40px] xl:text-[40px] 2xl:text-[50px] -mb-4  lg:mt-[12%] lg:-mb-6">
           I’m Guido, a venezuelan
         </p>
         <h1 className="font-sans text-[89px] uppercase text-secondary leading-[98px] lg:text-[120px] xl:text-[150px] 2xl:text-[189px] lg:leading-[189px] ">
