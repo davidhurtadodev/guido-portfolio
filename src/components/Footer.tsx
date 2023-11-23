@@ -32,7 +32,11 @@ export default function Footer() {
             You can also find me on:
           </p>
           <div className="flex gap-x-2">
-            <Link target="_blank" className="block" href="/#">
+            <Link
+              target="_blank"
+              className="block"
+              href="https://es.linkedin.com/in/guido-hurtado-grooscors-17238012a"
+            >
               <Linkedin className="fill-secondary hover:fill-accent" />
             </Link>
             <Link

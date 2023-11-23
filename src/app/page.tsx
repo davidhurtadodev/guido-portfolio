@@ -4,7 +4,6 @@ import ScreenContainer from '@/components/ScreenContainer';
 import JourneyContainer from '@/components/JourneyContainer';
 import ProjectsContainer from '@/components/ProjectsContainer';
 import Footer from '@/components/Footer';
-import BelowHeroContainer from '@/components/BelowHeroContainer';
 
 export default function Home() {
   return (
