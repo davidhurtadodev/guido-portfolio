@@ -9,12 +9,15 @@ export default function Home() {
   return (
     <main id="main" className="bg-primary relative">
       <ScreenContainer>
-        <Header />
+        <Header className="bg-transparent static" />
         <Hero />
       </ScreenContainer>
-      <JourneyContainer />
-      <ProjectsContainer />
-      <Footer />
+      <div className="w-full relative">
+        <Header className="bg-transparent sticky bg-[#21201C] shadow-[0px_3px_4px_0px_rgba(0,0,0,0.25)]  top-0" />
+        <JourneyContainer />
+        <ProjectsContainer />
+        <Footer />
+      </div>
     </main>
   );
 }

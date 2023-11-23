@@ -11,18 +11,18 @@ export default function Footer() {
       <div className="lg:flex lg:gap-x-[283px] lg:mb-12">
         <div>
           <div className="mb-5">
-            <h2 className="font-sans text-[54px] font-normal text-secondary">
+            <h2 className="font-sans text-[54px] leading-[54px] font-normal text-secondary mb-0 lg:text-[69px] lg:leading-[90px]">
               Guido Hurtado
             </h2>
-            <h2 className="font-sans text-[54px] font-thin text-secondary">
+            <h2 className="font-sans leading-[54px] text-[54px] font-thin text-secondary mb-5 lg:text-[69px] lg:leading-[90px]">
               UX/UI Designer
             </h2>
           </div>
           <div className="mb-2">
-            <p className="font-mono text-[27px] mb-1 text-secondary">
+            <p className="font-mono text-[27px] leading-[23px] mb-2 text-secondary">
               guidohurtadog@gmail.com
             </p>
-            <p className="font-mono text-[27px] text-secondary">
+            <p className="font-mono text-[27px] leading-[23px] mb-3 text-secondary">
               +34 650 779 404
             </p>
           </div>
@@ -32,7 +32,11 @@ export default function Footer() {
             You can also find me on:
           </p>
           <div className="flex gap-x-2">
-            <Link target="_blank" className="block" href="/#">
+            <Link
+              target="_blank"
+              className="block"
+              href="https://es.linkedin.com/in/guido-hurtado-grooscors-17238012a"
+            >
               <Linkedin className="fill-secondary hover:fill-accent" />
             </Link>
             <Link
