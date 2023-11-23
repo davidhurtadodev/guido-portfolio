@@ -16,7 +16,6 @@ export default function JourneyContainer() {
 
   return (
     <section
-      ref={ref}
       className=" bg-primary w-full flex flex-col items-center pt-[148px] lg:pt-10 lg:mb-[80px]"
       id="journeySection"
     >
