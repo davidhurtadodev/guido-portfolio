@@ -4,11 +4,25 @@ import useYScroll from '@/lib/hooks/useYOffset';
 import Link from 'next/link';
 
 export default function Header({ className }: { className?: string }) {
-  const { YScroll } = useYScroll();
+  const [BG, setBG] = useState('rgba(33,32,28,0)');
+
+  const handleScroll = () => {
+    const YScroll = window.scrollY;
+    let calc = YScroll / 40;
+    if (calc > 1) calc = 1;
+
+    setBG(`rgba(33,32,28,${calc})`);
+  };
+
+  useEffect(() => {
+    window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <header
-      className={`w-full px-6 py-9  lg:px-[110px] z-50 bg-primary  ${className}`}
+      className={`w-full px-6   pt-9 pb-8 lg:px-[105px] z-50 ${BG} fixed  ${className}`}
+      style={{ background: BG }}
     >
       <nav className="w-full">
         <ul className="flex w-full justify-between lg:justify-start lg:gap-x-10">
