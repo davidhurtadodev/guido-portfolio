@@ -21,7 +21,7 @@ export default function Header({ className }: { className?: string }) {
 
   return (
     <header
-      className={`w-full px-6   pt-9 pb-8 lg:px-[105px] z-50 ${BG} fixed  top-0}`}
+      className="w-full px-6   pt-9 pb-8 lg:px-[105px] z-50 ${BG} fixed  top-0"
       style={{ background: BG }}
     >
       <nav className="w-full">
