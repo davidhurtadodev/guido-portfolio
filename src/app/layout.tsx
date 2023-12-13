@@ -3,6 +3,7 @@ import '../../node_modules/nes.css/css/nes.css';
 import './globals.css';
 import type { Metadata } from 'next';
 import { antonio, vt323 } from '@/lib/fonts';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 export const metadata: Metadata = {
   title: 'Guido Hurtado - Portfolio',
@@ -19,6 +20,9 @@ export default function RootLayout({
       <body
         className={`window ${antonio.variable} ${vt323.variable} after:absolute after:w-0 after:h-0 after:overflow-hidden after:-z-10 after:content-[url('/assets/images/guido-drinking.gif')] cursor-[url(/assets/images/cursor.gif)_22_22,_auto]`}
       >
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
         {children}
       </body>
     </html>
