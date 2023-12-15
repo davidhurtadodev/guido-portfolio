@@ -20,7 +20,8 @@ export default function RootLayout({
       <body
         className={`window ${antonio.variable} ${vt323.variable} after:absolute after:w-0 after:h-0 after:overflow-hidden after:-z-10 after:content-[url('/assets/images/guido-drinking.gif')] cursor-[url(/assets/images/cursor.gif)_22_22,_auto]`}
       >
-        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS &&
+        process.env.NODE_ENV === 'production' ? (
           <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
         ) : null}
         {children}
