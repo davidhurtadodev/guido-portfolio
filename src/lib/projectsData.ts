@@ -40,6 +40,6 @@ export const projectsData: Array<Project> = [
       src: youtube,
       dimensions: 'w-[27px] lg:w-[192px] h-[27px] lg:h-[192px]',
     },
-    url: `https://www.youtube.com/nipkowtv`,
+    url: `http://portfolio.guidohurtado.com/nipkow`,
   },
 ];
