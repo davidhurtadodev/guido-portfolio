@@ -12,7 +12,7 @@ export const projectsData: Array<Project> = [
       src: disk,
       dimensions: 'w-[19px] lg:w-[185px] h-[32px] lg:h-[307px]',
     },
-    url: 'https://www.makavisual.com/rviewer/',
+    url: 'http://portfolio.guidohurtado.com/rviewer',
   },
   {
     title: 'Sysde SAF+',
