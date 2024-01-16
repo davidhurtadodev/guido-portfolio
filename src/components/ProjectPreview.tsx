@@ -51,12 +51,12 @@ export default function ProjectPreview({
         </div>
         <Link
           className="hover:no-underline"
-          target="_blank"
+          target={project.openBlank ? '_blank' : undefined}
           href={project.url ?? '/#'}
         >
           <Button className="uppercase bg-transparent w-[253px]   flex justify-center gap-x-2 font-mono text-2xl text-secondary py-3 h-[49px] hover:bg-[#FF4C6C] [border-image-source:url(/assets/images/button-border.svg)] [border-image-slice:3]  [border-image-width:2] border  [border-image-repeat:stretch]">
             View project
-            <Tab />
+            {project.openBlank && <Tab />}
           </Button>
         </Link>
       </div>
