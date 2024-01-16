@@ -13,6 +13,7 @@ export const projectsData: Array<Project> = [
       dimensions: 'w-[19px] lg:w-[185px] h-[32px] lg:h-[307px]',
     },
     url: 'http://portfolio.guidohurtado.com/rviewer',
+    openBlank: false,
   },
   {
     title: 'Sysde SAF+',
@@ -23,6 +24,7 @@ export const projectsData: Array<Project> = [
     },
     url: `https://projects.invisionapp.com/share/8V13CWE54Z9D#/screens/474909251_LOGIN
     `,
+    openBlank: true,
   },
   {
     title: 'Survivor 01',
@@ -32,7 +34,9 @@ export const projectsData: Array<Project> = [
       dimensions: 'w-[68px] lg:w-[300px] h-[55px] lg:h-[240px]',
     },
     url: `https://www.figma.com/proto/G99cFbByQayjaz84zlQMfy/Game-UI?page-id=0%3A1&type=design&node-id=342-532&viewport=-861%2C-190%2C0.12&t=z3imxKt54TtjbtLt-1&scaling=min-zoom&starting-point-node-id=306%3A759&mode=design`,
+    openBlank: true,
   },
+
   {
     title: 'Nipkow',
     text: `NIPKOW is the youtube channel where I speak about videogames, anime and manga. I'm in charge in all the writing, designing, animate, recording and editing.`,
@@ -41,5 +45,6 @@ export const projectsData: Array<Project> = [
       dimensions: 'w-[27px] lg:w-[192px] h-[27px] lg:h-[192px]',
     },
     url: `http://portfolio.guidohurtado.com/nipkow`,
+    openBlank: false,
   },
 ];

@@ -20,4 +20,5 @@ export type Project = {
     src: StaticImageData;
     dimensions: string;
   };
+  openBlank: boolean;
 };
