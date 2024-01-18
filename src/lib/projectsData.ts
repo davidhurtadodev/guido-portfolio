@@ -5,6 +5,16 @@ import disk from '@assets/images/projects/disk.gif';
 import type { Project } from './types';
 
 export const projectsData: Array<Project> = [
+    {
+    title: 'Credicore',
+    text: 'Rviewer is a digital product that connect high tech profiles with companies. My roles initially was to create high fidelity wireframes and UI for some features of the product and then the creation of all the pieces of design required by the marketing department',
+    img: {
+      src: disk,
+      dimensions: 'w-[19px] lg:w-[185px] h-[32px] lg:h-[307px]',
+    },
+    url: 'https://invis.io/2A13EVBP9YK8#/430892144_LOGIN_FINAL',
+    openBlank: false,
+  },
   {
     title: 'RVIEWER',
     text: 'Rviewer is a digital product that connect high tech profiles with companies. My roles initially was to create high fidelity wireframes and UI for some features of the product and then the creation of all the pieces of design required by the marketing department',
