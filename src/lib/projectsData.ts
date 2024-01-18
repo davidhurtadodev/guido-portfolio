@@ -7,7 +7,7 @@ import type { Project } from './types';
 export const projectsData: Array<Project> = [
     {
     title: 'Credicore',
-    text: 'Rviewer is a digital product that connect high tech profiles with companies. My roles initially was to create high fidelity wireframes and UI for some features of the product and then the creation of all the pieces of design required by the marketing department',
+    text: 'Credicore is a Chilean SaaS Product for grant and manage differents types of bank credtis. The product was created to distribuited in all LATAM ',
     img: {
       src: wallet,
       dimensions: 'w-[19px] lg:w-[185px] h-[32px] lg:h-[307px]',
