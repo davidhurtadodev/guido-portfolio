@@ -2,6 +2,7 @@ import coin from '@assets/images/projects/coin.gif';
 import youtube from '@assets/images/projects/youtube.gif';
 import survivor from '@assets/images/projects/survivor.gif';
 import disk from '@assets/images/projects/disk.gif';
+import wallet from '@assets/images/projects/wallet.gif';
 import type { Project } from './types';
 
 export const projectsData: Array<Project> = [
