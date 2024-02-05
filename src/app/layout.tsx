@@ -28,7 +28,8 @@ export default function RootLayout({
         {children}
       </body>
       {process.env.NODE_ENV === 'production' ? (
-        <Script strategy="afterInteractive" id="hotjar">
+        // eslint-disable-next-line @next/next/no-before-interactive-script-outside-document
+        <Script strategy="beforeInteractive" id="hotjar">
           {`function(h,o,t,j,a,r){
           h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
           h._hjSettings={hjid:3844172,hjsv:6};
