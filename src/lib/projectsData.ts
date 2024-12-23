@@ -44,7 +44,7 @@ export const projectsData: Array<Project> = [
       src: survivor,
       dimensions: 'w-[68px] lg:w-[300px] h-[55px] lg:h-[240px]',
     },
-    url: `https://www.figma.com/proto/G99cFbByQayjaz84zlQMfy/Game-UI?page-id=0%3A1&type=design&node-id=342-532&viewport=-861%2C-190%2C0.12&t=z3imxKt54TtjbtLt-1&scaling=min-zoom&starting-point-node-id=306%3A759&mode=design`,
+    url: `https://www.figma.com/proto/9NlFabbDGMTQz8u1MapMu6/Suvivor-01?page-id=1%3A29990&node-id=1-29991&viewport=599%2C489%2C0.09&t=rpLyQvQwW2oX9VEo-1&scaling=min-zoom&content-scaling=fixed`,
     openBlank: true,
   },
 
