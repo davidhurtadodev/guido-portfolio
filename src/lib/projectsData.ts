@@ -6,16 +6,6 @@ import wallet from '@assets/images/projects/wallet.gif';
 import type { Project } from './types';
 
 export const projectsData: Array<Project> = [
-    {
-    title: 'Credicore',
-    text: 'Credicore is a Chilean SaaS Product for grant and manage differents types of bank credtis. The product was created to distribuited in all LATAM ',
-    img: {
-      src: wallet,
-      dimensions: 'w-[19px] lg:w-[185px] h-[32px] lg:h-[307px]',
-    },
-    url: 'https://invis.io/2A13EVBP9YK8#/430892144_LOGIN_FINAL',
-    openBlank: true,
-  },
   {
     title: 'RVIEWER',
     text: 'Rviewer is a digital product that connect high tech profiles with companies. My roles initially was to create high fidelity wireframes and UI for some features of the product and then the creation of all the pieces of design required by the marketing department',
@@ -25,17 +15,6 @@ export const projectsData: Array<Project> = [
     },
     url: 'http://portfolio.guidohurtado.com/rviewer',
     openBlank: false,
-  },
-  {
-    title: 'Sysde SAF+',
-    text: 'Saf+ is beautiful software that processes and automates the operations for the financial institutions. My tasks were to create an intuitive interface that can be used by anyone with financial and technological knowledge.',
-    img: {
-      src: coin,
-      dimensions: 'w-[30px] lg:w-[192px] h-[30px] lg:h-[192px]',
-    },
-    url: `https://projects.invisionapp.com/share/8V13CWE54Z9D#/screens/474909251_LOGIN
-    `,
-    openBlank: true,
   },
   {
     title: 'Survivor 01',
